@@ -1,5 +1,6 @@
 # customizer
-Lab for validation of knowledge
+
+Knowledge Validation Laboratory for RD
 
 ## TODO: README
 
