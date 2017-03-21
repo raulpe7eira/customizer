@@ -1,0 +1,6 @@
+<div class="panel-default">
+  <div class="panel-heading">
+    <h1><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> <%= "#{t('titles.new')} #{CustomField.model_name.human}" %></h1>
+  </div>
+  <%= render 'form', custom_field: @custom_field %>
+</div>

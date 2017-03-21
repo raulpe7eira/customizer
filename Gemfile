@@ -8,6 +8,18 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
+# Use Assets Bootstrap for responsive html
+gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
+# Use Assets Notify.js for notification
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
+# Use kaminari-i18n for collecting Locale data for kaminari
+gem 'kaminari-i18n'
+# Use kaminari for paginator
+gem 'kaminari'
+# Use cocoon for dynamic nested forms using jQuery made easy
+gem 'cocoon'
+# Use rails-i18n for collecting Locale data for Ruby on Rails
+gem 'rails-i18n'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

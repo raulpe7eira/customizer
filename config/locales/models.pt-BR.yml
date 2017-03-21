@@ -1,0 +1,18 @@
+pt-BR:
+  activerecord:
+    models:
+      custom_field:
+        one: Campo Personalizado
+        other: Campos Personalizados
+      type: Tipo de Campo
+      option:
+        one: Opção
+        other: Opções
+    attributes:
+      custom_field:
+        label: Rótulo
+        type_id: Tipo de Campo
+      type:
+        value: Tipo
+      option:
+        value: Opção
