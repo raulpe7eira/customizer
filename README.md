@@ -74,6 +74,6 @@ Go to => *[https://intense-bastion-42995.herokuapp.com/](https://intense-bastion
 
 ## Conclusion
 
-I learned a lot in these 3 days of project development, even more than I barely knew the language in which I set out to face the challenge, satisfied with the result and willing to know even more deeply the whole platform, especially the parts that I could not study right in this Short time (Tests).
+I learned a lot in these 3 days of project development, even more than I barely knew the language in which I set out to face the challenge, satisfied with the result and willing to know even more deeply the whole platform, especially the parts that I could not study right in this short time (Tests).
 
 **LET'S GO, GUYS!** :muscle:
