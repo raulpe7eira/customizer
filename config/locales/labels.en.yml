@@ -1,7 +1,7 @@
 en:
   labels:
     auth:
-      logged_in_as: Logged in as
+      logged_in_as_html: Logged in as <strong>%{email}</strong>.
       edit_profile: Edit profile
       logout: Logout
       sign_up: Sign up
@@ -11,10 +11,3 @@ en:
     error:
       one: Error
       other: Errors
-
-              Logged in as <strong><%= current_user.email %></strong>.
-              <%= link_to t('Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-            <% else %>
-              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
