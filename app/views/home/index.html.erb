@@ -4,7 +4,7 @@
   </div>
   <div class="panel-body">
     <ul class="nav nav-pills nav-stacked text-center">
-      <li role="presentation"><%= link_to 'Contatos', '#' %></li>
+      <li role="presentation"><%= link_to Contact.model_name.human(count: 2), contacts_path %></li>
       <li role="presentation"><%= link_to CustomField.model_name.human(count: 2), custom_fields_path %></li>
     </ul>
   </div>

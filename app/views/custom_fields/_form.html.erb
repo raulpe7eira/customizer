@@ -2,7 +2,7 @@
 <div class="panel-body">
   <% if custom_field.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(custom_field.errors.count, "error") %> prohibited this custom_field from being saved:</h2>
+      <h2><%= "#{pluralize(custom_field.errors.count, t('titles.error', count: custom_field.errors.count))}: #{t('messages.error')}" %></h2>
 
       <ul>
       <% custom_field.errors.full_messages.each do |message| %>
@@ -19,12 +19,12 @@
 
   <div class="form-group">
     <%= f.label :type_id %>
-    <%= collection_select :custom_field, :type_id, @type_all, :id, :value, {}, class: 'form-control' %>
+    <%= f.collection_select :type_id, @type_all, :id, :value, {}, class: 'form-control' %>
   </div>
 
   <div id="custom_field_options_id" class="form-group">
-    <%= f.fields_for :options do |fo| %>
-      <%= render partial: 'option_fields', locals: { f: fo } %>
+    <%= f.fields_for :options do |option| %>
+      <%= render 'option_fields', :f => option %>
     <% end %>
     <%= link_to_add_association "#{t('buttons.add')} #{Option.model_name.human(count: 2)}", f, :options, class: 'btn btn-default' %>
   </div>

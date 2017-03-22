@@ -1,6 +1,7 @@
 pt-BR:
   messages:
     confirm: Tem certeza?
-    created: Was successfully created
-    updated: Was successfully updated
-    destroyed: Was successfully destroyed
+    created: Foi criado com sucesso
+    updated: Foi atualizado com sucesso
+    destroyed: Foi destruído com sucesso
+    error: Proibido de ser salvo

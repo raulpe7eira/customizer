@@ -63,14 +63,14 @@ class CustomFieldsController < ApplicationController
   end
 
   private
-    # Define all types
-    def set_type_all
-      @type_all = Type.all
-    end
-
     # Use callbacks to share common setup or constraints between actions.
     def set_custom_field
       @custom_field = CustomField.find(params[:id])
+    end
+
+    # Define all types
+    def set_type_all
+      @type_all = Type.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

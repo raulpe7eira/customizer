@@ -1,0 +1,13 @@
+<div class="form-group">
+  <%= f.label f.object.custom_field.label %>
+  <% if f.object.custom_field.type.value === 'Text' %>
+    <%= f.text_field :value, class: 'form-control' %>
+  <% elsif f.object.custom_field.type.value === 'Text Area' %>
+    <%= f.text_area :value, class: 'form-control' %>
+  <% else %>
+    <%= f.collection_select :value, f.object.custom_field.options, :id, :value, {}, class: 'form-control' %>
+  <% end %>
+
+  <%= f.hidden_field :contact_id %>
+  <%= f.hidden_field :custom_field_id %>
+</div>

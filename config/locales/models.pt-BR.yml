@@ -1,6 +1,9 @@
 pt-BR:
   activerecord:
     models:
+      contact:
+        one: Contato
+        other: Contatos
       custom_field:
         one: Campo Personalizado
         other: Campos Personalizados
@@ -9,6 +12,9 @@ pt-BR:
         one: Opção
         other: Opções
     attributes:
+      contact:
+        name: Nome
+        email: E-mail
       custom_field:
         label: Rótulo
         type_id: Tipo de Campo
