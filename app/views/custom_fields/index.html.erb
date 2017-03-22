@@ -1,4 +1,4 @@
-<script>$.notify('<%= t(notice) %>', 'success' );</script>
+<script>$.notify('<%= notice ? t(notice) : "" %>', 'success' );</script>
 
 <div class="panel-default">
   <div class="panel-heading">
@@ -39,5 +39,6 @@
   </div>
   <div class="panel-footer">
     <%= link_to t('buttons.new'), new_custom_field_path, class: 'btn btn-primary' %>
+    <%= link_to t('buttons.back'), root_path, class: 'btn btn-default' %>
   </div>
 </div>

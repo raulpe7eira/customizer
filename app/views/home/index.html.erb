@@ -1,0 +1,11 @@
+<div class="panel-default">
+  <div class="panel-heading">
+    <h1><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Customizer</h1>
+  </div>
+  <div class="panel-body">
+    <ul class="nav nav-pills nav-stacked text-center">
+      <li role="presentation"><%= link_to 'Contatos', '#' %></li>
+      <li role="presentation"><%= link_to CustomField.model_name.human(count: 2), custom_fields_path %></li>
+    </ul>
+  </div>
+</div>
