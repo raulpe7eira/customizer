@@ -1,4 +1,4 @@
-# Customizer (validation lab for [resultadosdigitais.com.br](http://resultadosdigitais.com.br/))
+# Customizer (vlab for [resultadosdigitais.com.br](http://resultadosdigitais.com.br/))
 
 A small project to test my skills.
 
@@ -46,7 +46,7 @@ Go to => *[https://intense-bastion-42995.herokuapp.com/](https://intense-bastion
 
 ### Platform
 
-**[Rails](http://rubyonrails.org/)**: It was a choice determined by the validation lab, I decided to face the challenge even knowing very little the environment and I finish the term determined to execute the project with the desire to continue deepening in the platform.
+**[Rails](http://rubyonrails.org/)**: It was a choice determined by the VLab, I decided to face the challenge even knowing very little the environment and I finish the term determined to execute the project with the desire to continue deepening in the platform.
 
 ### Backend
 
@@ -70,7 +70,7 @@ Go to => *[https://intense-bastion-42995.herokuapp.com/](https://intense-bastion
 
 ### Production Servers
 
-**[Heroku](https://heroku.com)** (PAAS): Although it was determined by the Validation Lab, already knew the environment, super practical to use and easy to set up. Because of the lack of testing, integration with [GitHub](https://github.com/) was not done.
+**[Heroku](https://heroku.com)** (PAAS): Although it was determined by the VLab, already knew the environment, super practical to use and easy to set up. Because of the lack of testing, integration with [GitHub](https://github.com/) was not done.
 
 ## Conclusion
 
