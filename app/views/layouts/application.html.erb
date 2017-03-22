@@ -17,13 +17,13 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <% if user_signed_in? %>
-              <li class="<%= 'active' if current_page?(contacts_path) %>" role="presentation">
+              <li class="<%= 'active' if current_controller?('contacts') %>" role="presentation">
                 <%= link_to contacts_path do %>
                   <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                   <%= Contact.model_name.human(count: 2) %>
                 <% end %>
               </li>
-              <li class="<%= 'active' if current_page?(custom_fields_path) %>" role="presentation">
+              <li class="<%= 'active' if current_controller?('custom_fields') %>" role="presentation">
                 <%= link_to custom_fields_path do %>
                   <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
                   <%= CustomField.model_name.human(count: 2) %>

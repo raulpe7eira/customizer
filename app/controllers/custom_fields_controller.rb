@@ -5,7 +5,7 @@ class CustomFieldsController < ApplicationController
   # GET /custom_fields
   # GET /custom_fields.json
   def index
-    @custom_fields = CustomField.order(:label).page(params[:page]).per(10)
+    @custom_fields = CustomField.where(user_id: current_user.id).order(:label).page(params[:page]).per(10)
   end
 
   # GET /custom_fields/1
@@ -75,6 +75,6 @@ class CustomFieldsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def custom_field_params
-      params.require(:custom_field).permit(:label, :type_id, options_attributes: [:id, :value, :_destroy])
+      params.require(:custom_field).permit(:user_id, :label, :type_id, options_attributes: [:id, :value, :_destroy])
     end
 end

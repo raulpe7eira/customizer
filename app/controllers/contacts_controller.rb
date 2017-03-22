@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.order(:name).page(params[:page]).per(10)
+    @contacts = Contact.where(user_id: current_user.id).order(:name).page(params[:page]).per(10)
   end
 
   # GET /contacts/1
@@ -69,6 +69,6 @@ class ContactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:name, :email, contact_custom_fields_attributes: [:id, :value, :contact_id, :custom_field_id, :_destroy])
+      params.require(:contact).permit(:user_id, :name, :email, contact_custom_fields_attributes: [:id, :value, :contact_id, :custom_field_id, :_destroy])
     end
 end

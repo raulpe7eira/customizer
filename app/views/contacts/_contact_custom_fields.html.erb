@@ -1,5 +1,5 @@
 <div class="form-group">
-  <%= f.label f.object.custom_field.label %>
+  <%= label_tag f.object.custom_field.label %>
   <% if f.object.custom_field.type.value === 'Text' %>
     <%= f.text_field :value, class: 'form-control' %>
   <% elsif f.object.custom_field.type.value === 'Text Area' %>
