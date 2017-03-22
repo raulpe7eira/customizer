@@ -1,0 +1,13 @@
+pt-BR:
+  labels:
+    auth:
+      logged_in_as: Logado como
+      edit_profile: Editar perfil
+      logout: Sair
+      sign_up: Inscrever-se
+      loing: Entrar
+    new: Novo
+    edit: Editar
+    error:
+      one: Erro
+      other: Erros

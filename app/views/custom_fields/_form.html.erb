@@ -2,7 +2,7 @@
 <div class="panel-body">
   <% if custom_field.errors.any? %>
     <div id="error_explanation">
-      <h2><%= "#{pluralize(custom_field.errors.count, t('titles.error', count: custom_field.errors.count))}: #{t('messages.error')}" %></h2>
+      <h2><%= "#{pluralize(custom_field.errors.count, t('labels.error', count: custom_field.errors.count))}: #{t('messages.error')}" %></h2>
 
       <ul>
       <% custom_field.errors.full_messages.each do |message| %>

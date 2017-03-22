@@ -2,7 +2,7 @@
 <div class="panel-body">
   <% if contact.errors.any? %>
     <div id="error_explanation">
-      <h2><%= "#{pluralize(contact.errors.count, t('titles.error', count: contact.errors.count))}: #{t('messages.error')}" %></h2>
+      <h2><%= "#{pluralize(contact.errors.count, t('labels.error', count: contact.errors.count))}: #{t('messages.error')}" %></h2>
 
       <ul>
       <% contact.errors.full_messages.each do |message| %>
