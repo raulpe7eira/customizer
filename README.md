@@ -1,4 +1,4 @@
-# Customizer (vlab for [resultadosdigitais.com.br](http://resultadosdigitais.com.br/))
+# Customizer (vlab for [http://resultadosdigitais.com.br/](http://resultadosdigitais.com.br/))
 
 A small project to test my skills.
 
