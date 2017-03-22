@@ -16,7 +16,7 @@ Have locally installed (only for Development and Test):
 - [Rake](https://github.com/ruby/rake)
 - [Rails](http://rubyonrails.org/)
 
-### Instalando dependências
+### Installing dependencies
 
 ```bash
 $ git clone https://github.com/raulpereira/customizer.git
