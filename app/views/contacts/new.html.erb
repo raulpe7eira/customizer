@@ -1,6 +1,4 @@
 <div class="panel-default">
-  <div class="panel-heading">
-    <h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <%= "#{t('titles.new')} #{Contact.model_name.human}" %></h1>
-  </div>
+  <h2 class="sb-title"><%= "#{t('titles.new')} #{Contact.model_name.human}" %></h2>
   <%= render 'form', contact: @contact %>
 </div>

@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    models:
+      contact:
+        one: Contact
+        other: Contacts
+      custom_field:
+        one: Custom Field
+        other: Custom Fields
+      type: Field Type
+      option:
+        one: Option
+        other: Options
+    attributes:
+      contact:
+        name: Name
+        email: E-mail
+      custom_field:
+        label: Label
+        type_id: Field Type
+      type:
+        value: Type
+      option:
+        value: Option

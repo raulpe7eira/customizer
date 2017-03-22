@@ -1,9 +1,6 @@
 <script>$.notify('<%= notice ? t(notice) : "" %>', 'success' );</script>
 
 <div class="panel-default">
-  <div class="panel-heading">
-    <h1><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> <%= CustomField.model_name.human(count: @custom_fields.count) %></h1>
-  </div>
   <div class="panel-body">
     <div class="table-responsive text-center">
       <table class="table table-condensed table-striped table-hover text-left">
