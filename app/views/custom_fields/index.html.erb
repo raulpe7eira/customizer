@@ -1,41 +1,40 @@
-<script>$.notify('<%= notice ? t(notice) : "" %>', 'success' );</script>
-
-<div class="panel-default">
-  <div class="panel-body">
-    <div class="table-responsive text-center">
-      <table class="table table-condensed table-striped table-hover text-left">
-        <thead>
+<div class="panel panel-default list">
+  <div class="panel-heading">
+    <%= link_to root_path, class: 'btn btn-default' do %>
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <% end %>
+    <%= link_to t('buttons.new'), new_custom_field_path, class: 'btn btn-primary pull-right' %>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-condensed table-striped table-hover">
+      <thead>
+        <tr>
+          <th><%= CustomField.human_attribute_name('label') %></th>
+          <th><%= CustomField.human_attribute_name('type_id') %></th>
+          <th class="actions"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @custom_fields.each do |custom_field| %>
           <tr>
-            <th><%= CustomField.human_attribute_name('label') %></th>
-            <th><%= CustomField.human_attribute_name('type_id') %></th>
-            <th></th>
+            <td><%= custom_field.label %></td>
+            <td><%= custom_field.type.value %></td>
+            <td>
+              <div class="btn-group btn-group-xs">
+                <%= link_to edit_custom_field_path(custom_field), class: 'btn btn-info' do %>
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                <% end %>
+                <%= link_to custom_field, method: :delete, data: { confirm: t('messages.confirm') }, class: 'btn btn-danger' do %>
+                  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                <% end %>
+              </div>
+            </td>
           </tr>
-        </thead>
-
-        <tbody>
-          <% @custom_fields.each do |custom_field| %>
-            <tr>
-              <td><%= custom_field.label %></td>
-              <td><%= custom_field.type.value %></td>
-              <td class="text-right">
-                <div class="btn-group btn-group-xs">
-                  <%= link_to edit_custom_field_path(custom_field), class: 'btn btn-info' do %>
-                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                  <% end %>
-                  <%= link_to custom_field, method: :delete, data: { confirm: t('messages.confirm') }, class: 'btn btn-danger' do %>
-                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                  <% end %>
-                </div>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-      <%= paginate @custom_fields, window: 2 %>
-    </div>
+        <% end %>
+      </tbody>
+    </table>
   </div>
   <div class="panel-footer">
-    <%= link_to t('buttons.new'), new_custom_field_path, class: 'btn btn-primary' %>
-    <%= link_to t('buttons.back'), root_path, class: 'btn btn-default' %>
+    <%= paginate @custom_fields, window: 2 %>
   </div>
 </div>

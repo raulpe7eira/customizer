@@ -8,11 +8,6 @@ class CustomFieldsController < ApplicationController
     @custom_fields = CustomField.where(user_id: current_user.id).order(:label).page(params[:page]).per(10)
   end
 
-  # GET /custom_fields/1
-  # GET /custom_fields/1.json
-  def show
-  end
-
   # GET /custom_fields/new
   def new
     @custom_field = CustomField.new

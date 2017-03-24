@@ -8,6 +8,8 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
+# Use devise-bootstrap-views for devise bootstrap views with i18n support
+gem 'devise-bootstrap-views'
 # Use devise-i18n for collecting Locale data for devise
 gem 'devise-i18n'
 # Use Devise for authentication

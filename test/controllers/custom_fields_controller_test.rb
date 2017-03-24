@@ -23,11 +23,6 @@ class CustomFieldsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to custom_field_url(CustomField.last)
   end
 
-  test "should show custom_field" do
-    get custom_field_url(@custom_field)
-    assert_response :success
-  end
-
   test "should get edit" do
     get edit_custom_field_url(@custom_field)
     assert_response :success

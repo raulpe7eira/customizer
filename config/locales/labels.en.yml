@@ -3,9 +3,7 @@ en:
     auth:
       logged_in_as_html: Logged in as <strong>%{email}</strong>.
       edit_profile: Edit profile
-      logout: Logout
-      sign_up: Sign up
-      loing: Login
+      sign_out: Logout
     new: New
     edit: Edit
     error:

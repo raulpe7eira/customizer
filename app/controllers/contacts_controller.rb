@@ -7,11 +7,6 @@ class ContactsController < ApplicationController
     @contacts = Contact.where(user_id: current_user.id).order(:name).page(params[:page]).per(10)
   end
 
-  # GET /contacts/1
-  # GET /contacts/1.json
-  def show
-  end
-
   # GET /contacts/new
   def new
     @contact = Contact.new

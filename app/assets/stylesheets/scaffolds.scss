@@ -1,8 +1,40 @@
+body {
+    background-color:#fbfbfb !important;
+}
+
+div.main {
+  padding-top:70px;
+}
+
+div.auth {
+  width:400px;
+}
+
+th.actions {
+  width:58px;
+}
+
+div.panel-footer {
+  background:none;
+  border-top:1px solid #ddd;
+  padding-bottom:0;
+  padding-left:0;
+  padding-right:0;
+}
+
+div.list div.panel-footer {
+  text-align: center;
+}
+
+ul.pagination {
+  margin:5px 0 10px;
+}
+
 h2.sb-title {
-    color: #959595;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0 15px;
-    text-transform: uppercase;
+  color:#959595;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1px;
+  margin:15px 15px 0;
+  text-transform:uppercase;
 }

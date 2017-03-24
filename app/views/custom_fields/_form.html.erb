@@ -1,38 +1,39 @@
-<%= form_for(setup_custom_field(custom_field)) do |f| %>
 <div class="panel-body">
-  <% if custom_field.errors.any? %>
+  <%= form_for(setup_custom_field(custom_field)) do |f| %>
+    <% if custom_field.errors.any? %>
     <div id="error_explanation">
       <h2><%= "#{pluralize(custom_field.errors.count, t('labels.error', count: custom_field.errors.count))}: #{t('messages.error')}" %></h2>
 
       <ul>
-      <% custom_field.errors.full_messages.each do |message| %>
+        <% custom_field.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
-  <% end %>
-
-  <%= f.hidden_field :user_id %>
-
-  <div class="form-group">
-    <%= f.label :label %>
-    <%= f.text_field :label, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :type_id %>
-    <%= f.collection_select :type_id, @type_all, :id, :value, {}, class: 'form-control' %>
-  </div>
-
-  <div id="custom_field_options_id" class="form-group">
-    <%= f.fields_for :options do |option| %>
-      <%= render 'option_fields', :f => option %>
     <% end %>
-    <%= link_to_add_association "#{t('buttons.add')} #{Option.model_name.human(count: 2)}", f, :options, class: 'btn btn-default' %>
-  </div>
+
+    <%= f.hidden_field :user_id %>
+
+    <div class="form-group">
+      <%= f.label :label %>
+      <%= f.text_field :label, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :type_id %>
+      <%= f.collection_select :type_id, @type_all, :id, :value, {}, class: 'form-control' %>
+    </div>
+
+    <div id="custom_field_options_id" class="form-group">
+      <%= f.fields_for :options do |option| %>
+        <%= render 'option_fields', :f => option %>
+      <% end %>
+      <%= link_to_add_association "#{t('buttons.add')} #{Option.model_name.human(count: 2)}", f, :options, class: 'btn btn-default' %>
+    </div>
+
+    <div class="panel-footer">
+      <%= f.submit t('buttons.save'), class: 'btn btn-primary' %>
+      <%= link_to t('buttons.cancel'), custom_fields_path, class: 'btn btn-default' %>
+    </div>
+  <% end %>
 </div>
-<div class="panel-footer">
-  <%= f.submit t('buttons.save'), class: 'btn btn-primary' %>
-  <%= link_to t('buttons.back'), custom_fields_path, class: 'btn btn-default' %>
-</div>
-<% end %>

@@ -1,41 +1,40 @@
-<script>$.notify('<%= notice ? t(notice) : "" %>', 'success' );</script>
-
-<div class="panel-default">
-  <div class="panel-body">
-    <div class="table-responsive text-center">
-      <table class="table table-condensed table-striped table-hover text-left">
-        <thead>
+<div class="panel panel-default list">
+  <div class="panel-heading">
+    <%= link_to root_path, class: 'btn btn-default' do %>
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <% end %>
+    <%= link_to t('buttons.new'), new_contact_path, class: 'btn btn-primary pull-right' %>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-condensed table-striped table-hover">
+      <thead>
+        <tr>
+          <th><%= Contact.human_attribute_name('name') %></th>
+          <th><%= Contact.human_attribute_name('email') %></th>
+          <th class="actions"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @contacts.each do |contact| %>
           <tr>
-            <th><%= Contact.human_attribute_name('name') %></th>
-            <th><%= Contact.human_attribute_name('email') %></th>
-            <th></th>
+            <td><%= contact.name %></td>
+            <td><%= contact.email %></td>
+            <td>
+              <div class="btn-group btn-group-xs">
+                <%= link_to edit_contact_path(contact), class: 'btn btn-info' do %>
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                <% end %>
+                <%= link_to contact, method: :delete, data: { confirm: t('messages.confirm') }, class: 'btn btn-danger' do %>
+                  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                <% end %>
+              </div>
+            </td>
           </tr>
-        </thead>
-
-        <tbody>
-          <% @contacts.each do |contact| %>
-            <tr>
-              <td><%= contact.name %></td>
-              <td><%= contact.email %></td>
-              <td class="text-right">
-                <div class="btn-group btn-group-xs">
-                  <%= link_to edit_contact_path(contact), class: 'btn btn-info' do %>
-                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                  <% end %>
-                  <%= link_to contact, method: :delete, data: { confirm: t('messages.confirm') }, class: 'btn btn-danger' do %>
-                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                  <% end %>
-                </div>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-      <%= paginate @contacts, window: 2 %>
-    </div>
+        <% end %>
+      </tbody>
+    </table>
   </div>
   <div class="panel-footer">
-    <%= link_to t('buttons.new'), new_contact_path, class: 'btn btn-primary' %>
-    <%= link_to t('buttons.back'), root_path, class: 'btn btn-default' %>
+    <%= paginate @contacts, window: 2 %>
   </div>
 </div>

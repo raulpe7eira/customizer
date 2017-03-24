@@ -23,11 +23,6 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to contact_url(Contact.last)
   end
 
-  test "should show contact" do
-    get contact_url(@contact)
-    assert_response :success
-  end
-
   test "should get edit" do
     get edit_contact_url(@contact)
     assert_response :success
