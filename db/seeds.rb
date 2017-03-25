@@ -6,7 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts '== Generating Types ==========================================================='
 start = Time.now
-Type.create!([{ value: 'Text' }, { value: 'Text Area' }, { value: 'Combo Box' }])
-puts "== [OK] (%.4fs) =============================================================" % [Time.now - start]
+puts '~> Types: Seeding ...'
+Type.create!([
+  { value: 'Text' },
+  { value: 'Text Area' },
+  { value: 'Combo Box' }
+]) do |type|
+  puts '   - create_type:(%s)' % [type.value]
+end
+puts '~> Types: Seeded (%.4fs).' % [Time.now - start], ''
