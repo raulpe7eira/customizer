@@ -5,3 +5,4 @@ en:
     updated: Was successfully updated
     destroyed: Was successfully destroyed
     error: Prohibited from being saved
+    no_records: No records found.

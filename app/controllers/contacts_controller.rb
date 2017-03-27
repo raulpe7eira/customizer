@@ -4,7 +4,8 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.where(user_id: current_user.id).order(:name).page(params[:page]).per(10)
+    @itens_per_page = 10
+    @contacts = Contact.where(user_id: current_user.id).order(:name).page(params[:page]).per(@itens_per_page)
   end
 
   # GET /contacts/new

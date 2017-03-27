@@ -5,7 +5,8 @@ class CustomFieldsController < ApplicationController
   # GET /custom_fields
   # GET /custom_fields.json
   def index
-    @custom_fields = CustomField.where(user_id: current_user.id).order(:label).page(params[:page]).per(10)
+    @itens_per_page = 10
+    @custom_fields = CustomField.where(user_id: current_user.id).order(:label).page(params[:page]).per(@itens_per_page)
   end
 
   # GET /custom_fields/new
