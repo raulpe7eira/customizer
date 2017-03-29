@@ -71,6 +71,8 @@ class CustomFieldsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def custom_field_params
-      params.require(:custom_field).permit(:user_id, :label, :type_id, options_attributes: [:id, :value, :_destroy])
+      params.require(:custom_field).permit(
+        :user_id, :label, :type_id,
+        options_attributes: [:id, :value, :_destroy])
     end
 end
