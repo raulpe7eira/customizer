@@ -40,7 +40,7 @@ $ rails s
 
 ### Production environment
 
-Go to => *[https://intense-bastion-42995.herokuapp.com/](https://intense-bastion-42995.herokuapp.com/)* :clap:
+Go to => *[https://customizer-rp.herokuapp.com/](https://customizer-rp.herokuapp.com/)* :clap:
 
 ## Considerations
 
