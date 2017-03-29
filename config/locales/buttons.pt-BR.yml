@@ -1,9 +1,7 @@
 pt-BR:
   buttons:
-    back: Voltar
     new: Novo
     edit: Editar
     add: Adicionar
-    destroy: Apagar
     save: Salvar
     cancel: Cancelar

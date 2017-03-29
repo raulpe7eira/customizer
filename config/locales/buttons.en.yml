@@ -1,9 +1,7 @@
 en:
   buttons:
-    back: Return
     new: New
     edit: Edit
     add: Add
-    destroy: Remove
     save: Save
     cancel: Cancel
