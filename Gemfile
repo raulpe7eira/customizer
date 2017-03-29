@@ -8,8 +8,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
-# Use faker for generating fake data such as names, addresses, and phone numbers
-gem 'faker'
 # Use devise-bootstrap-views for devise bootstrap views with i18n support
 gem 'devise-bootstrap-views'
 # Use devise-i18n for collecting Locale data for devise
@@ -54,6 +52,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  # Use faker for generating fake data such as names, addresses, and phone numbers
+  gem 'faker'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
