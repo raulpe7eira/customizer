@@ -11,7 +11,7 @@ namespace :dbtst do
       2.times do |i|
         email = i == 0 ? 'raul.pereira@gmail.com' : Faker::Internet.email
         User.create!({ email: email, password: '000000', password_confirmation: '000000' }) do |user|
-          puts '   - create_user:(%s|000000)' % [email]
+          puts '   - create_user:(%s|000000)' % [user.email]
         end
       end
 
@@ -55,7 +55,7 @@ namespace :dbtst do
       puts '~> Contacts: Seeding ...'
 
       User.all.each do |user|
-        40.times do |i|
+        40.times do
           Contact.create!({ user: user, name: Faker::Name.name, email: Faker::Internet.email }) do |contact|
             puts '   - create_contact:(%s|%s)' % [contact.name, contact.email]
             CustomField.where(user: user).each do |custom_field|
